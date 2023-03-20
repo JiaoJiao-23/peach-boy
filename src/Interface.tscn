@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://CoinCounter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PeachCounter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ArtWork/Pixellari.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Interface.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="Interface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.934372
+margin_top = 0.854294
+margin_right = 0.934326
+margin_bottom = 0.854309
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinCounter" parent="." instance=ExtResource( 1 )]
+margin_left = 941.458
+margin_top = 1.65177
+margin_right = 1022.46
+margin_bottom = 37.6518
+
+[node name="PeachCounter" parent="." instance=ExtResource( 2 )]
+margin_left = 1.35809
+margin_top = 1.41741
+margin_right = 82.3581
+margin_bottom = 37.4174
+
+[node name="Button" type="Button" parent="."]
+margin_left = 967.881
+margin_top = 41.4108
+margin_right = 1019.88
+margin_bottom = 85.4108
+custom_fonts/font = SubResource( 1 )
+text = "SHOP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

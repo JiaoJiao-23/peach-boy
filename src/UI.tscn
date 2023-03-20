@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ArtWork/Pixellari.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Normal.png" type="Texture" id=5]
+[ext_resource path="res://Quit.png" type="Texture" id=7]
+[ext_resource path="res://Background.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 800, 600 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 800, 600 )
+
+[node name="UI" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -1.5554, 1.39572 )
+scale = Vector2( 0.280366, 0.316523 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Coin" parent="." instance=ExtResource( 2 )]
+position = Vector2( -82.3517, -20.5891 )
+
+[node name="Coin2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 26.6614, -21.3112 )
+
+[node name="Attack" type="Label" parent="."]
+margin_left = -84.5727
+margin_top = -68.0372
+margin_right = -11.5727
+margin_bottom = -39.0372
+custom_fonts/font = SubResource( 1 )
+text = "Attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defence" type="Label" parent="."]
+margin_left = 18.3551
+margin_top = -71.4091
+margin_right = 90.3551
+margin_bottom = -40.4091
+custom_fonts/font = SubResource( 2 )
+text = "Defence"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = -197.767
+margin_top = -48.3273
+margin_right = 272.233
+margin_bottom = 339.673
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = -87.5778
+margin_top = -50.4462
+margin_right = 382.422
+margin_bottom = 337.554
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 91.6144
+margin_top = -93.4558
+margin_right = 110.614
+margin_bottom = -77.4558
+custom_styles/normal = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

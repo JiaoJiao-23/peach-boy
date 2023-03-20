@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Japanese-SciFI trap loop.mp3-6d02ef5a73ca5c5cb432380391369a3c.mp3str"
+
+[deps]
+
+source_file="res://Japanese-SciFI trap loop.mp3"
+dest_files=[ "res://.import/Japanese-SciFI trap loop.mp3-6d02ef5a73ca5c5cb432380391369a3c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

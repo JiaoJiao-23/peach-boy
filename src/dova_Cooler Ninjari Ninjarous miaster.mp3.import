@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dova_Cooler Ninjari Ninjarous miaster.mp3-acf9dac049e9194e96e37612556c36ff.mp3str"
+
+[deps]
+
+source_file="res://dova_Cooler Ninjari Ninjarous miaster.mp3"
+dest_files=[ "res://.import/dova_Cooler Ninjari Ninjarous miaster.mp3-acf9dac049e9194e96e37612556c36ff.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

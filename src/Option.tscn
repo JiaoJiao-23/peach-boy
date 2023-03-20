@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ArtWork/Pixellari.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ArtWork/drawing-2.svg" type="Texture" id=2]
+[ext_resource path="res://Option.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="Option" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="drawing-3" type="Sprite" parent="."]
+position = Vector2( 511.246, 299.303 )
+scale = Vector2( 0.401085, 0.418723 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 80.7631
+margin_top = 133.06
+margin_right = 998.763
+margin_bottom = 336.06
+custom_fonts/font = SubResource( 1 )
+text = "Arrow key to control
+Space to attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 408.87
+margin_top = 349.095
+margin_right = 670.87
+margin_bottom = 371.095
+custom_fonts/font = SubResource( 2 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

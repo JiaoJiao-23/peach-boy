@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://Japanese-SciFI trap loop.mp3" type="AudioStream" id=2]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ArtWork/Pixellari.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ArtWork/drawing-2.svg" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 4 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.12244
+margin_bottom = 1.12244
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="drawing-2" type="Sprite" parent="."]
+position = Vector2( 511.246, 300.247 )
+scale = Vector2( 0.401085, 0.418723 )
+texture = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.0
+margin_top = -5.0
+margin_right = 176.0
+margin_bottom = 69.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+margin_right = 358.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 3 )
+text = "Start"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 26.0
+margin_right = 358.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+text = "Options"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 358.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 3 )
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 0.5
+margin_left = 127.838
+margin_top = 69.2849
+margin_right = 409.838
+margin_bottom = 289.285
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "PEACH BOY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
